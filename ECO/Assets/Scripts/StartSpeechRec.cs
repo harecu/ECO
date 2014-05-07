@@ -10,13 +10,16 @@ public class StartSpeechRec : MonoBehaviour {
 	void Start () {
 		ProcessStartInfo pStartInfo = new ProcessStartInfo(Application.dataPath + "/Speech/RecoServeurX64.exe");
 		try {
-		pStartInfo.CreateNoWindow = false;
-		if(Wow.Is64BitOperatingSystem) {
-			Process.Start(pStartInfo);
-		} else {
-			pStartInfo.FileName = "RecoServeurX86.exe"; //everything the same except filename
-			Process.Start(pStartInfo);
-		}
+		    pStartInfo.CreateNoWindow = false;
+            pStartInfo.WorkingDirectory = Application.dataPath + "/Speech";
+            pStartInfo.Arguments = "";
+
+		    if(Wow.Is64BitOperatingSystem) {
+			    Process.Start(pStartInfo);
+		    } else {
+			    pStartInfo.FileName = "RecoServeurX86.exe"; //everything the same except filename
+			    Process.Start(pStartInfo);
+		    }
 		} catch (Exception e) {
 			Console.WriteLine(e.Message);
 		}
