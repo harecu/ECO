@@ -12,7 +12,6 @@ public class StartSpeechRec : MonoBehaviour {
 		try {
 		    pStartInfo.CreateNoWindow = false;
             pStartInfo.WorkingDirectory = Application.dataPath + "/Speech";
-            pStartInfo.Arguments = "";
 
 		    if(Wow.Is64BitOperatingSystem) {
 			    Process.Start(pStartInfo);
