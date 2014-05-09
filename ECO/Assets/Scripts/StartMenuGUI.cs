@@ -18,5 +18,6 @@ public class StartMenuGUI : MonoBehaviour {
 			GUI.skin = mainGUIskin;
 
 		GUI.Label(new Rect(((Screen.width-100) / 2),10,100,75), langManager.GetTextValue("StartMenu.Title"));
+		GUI.Label(new Rect(((Screen.width-100) / 2),10,100,175), langManager.GetTextValue("StartMenu.Description"));
 	}
 }
