@@ -7,10 +7,10 @@ public class PrologueText : MonoBehaviour
     public UILabel label;
 
     void Start()
-    {                
+    {        
         string[] words = label.text.Split(null);
 
-        StartCoroutine(TextFadeIn());        
+        StartCoroutine(TextFadeIn());
     }
 
     IEnumerator TextFadeIn()
