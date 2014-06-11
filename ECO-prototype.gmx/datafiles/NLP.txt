@@ -1,0 +1,44 @@
+Natural Language Processing
+
+CATEGORIES - Provides a high level identification about the subject of the sentence 
+ACTIONS - A more specific type of category, and provides some information about the intent of the text 
+ENTITIES -  Important pieces of information from the sentence in a normalized form
+
+For example:
+
+CATEGORY
+movement - triggered from words like "go" "move" "head" "jump" "climb" paired with ENTITIES below
+
+ACTIONS
+movement_walk(ENT direction or ENT destination) - movement defaults to "walk" unless specified otherwise
+movement_stop() - stops any previous movement 
+movement_run(ENT direction or ENT destination) - distinct from walking
+movement_jump(ENT direction or ENT destination)
+movement_climb(ENT direction or ENT destination)
+
+ENTITIES
+jump, run, sprint, jog, leap, climb
+left, right, up, down, north, east, west, south, in, out, around
+proper nouns for destinations
+
+CATEGORY
+affirm
+
+ACTIONS
+affirm_yes(ENT boolean or null) - sets the boolean or the implied boolean to true
+affirm_no(ENT boolean or null) - same but false
+
+ENTITIES
+no, nah, nope, rather not, can't, won't, shouldn't, not, cannot, can not, don't
+yes, yeah, yea, ya, yup, yep, sure, of course, no problem, my pleasure, why not,
+
+CATEGORY
+name
+
+ACTIONS
+name_set(ENT name) - sets the player's name
+name_get() - gets the player's name
+
+ENTITIES
+my name is, I am, I'm, named, name, {followed by a capital letter word}
+who am I, know, who I am, what, is my name, am I called, named 

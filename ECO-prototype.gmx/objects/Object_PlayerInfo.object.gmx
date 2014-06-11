@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player_name = "" + string_random("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2) + string(floor(random(1000)));
+            <string>// if the player ever decides to give him/herself a name, store it here
+player_name = "" + string_random("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 2) + string(floor(random(1000)));
+// each time the player moves, this should be updated
+player_direction = "north";
+// each time the player hits the Enter key, this should be updated
+// unless the line is blank, then keep the last response
+player_response = "";
+// upon entering each new room, this should be updated
+player_current_room = "Room_StartGame";
 </string>
           </argument>
         </arguments>

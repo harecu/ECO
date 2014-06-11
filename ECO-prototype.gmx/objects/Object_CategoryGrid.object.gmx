@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.start_game_grid = create_category_grid("words.txt", 0, 0);
+if(global.start_game_grid != -1) success = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,11 +49,26 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Set txt to left with center vertical alignment
-draw_set_halign(fa_left);
-draw_set_valign(fa_center);
-draw_set_colour(c_white);
-draw_text(x,y,txt);
+            <string>draw_set_font(Font_Debug);
+draw_set_alpha(1);
+draw_text(x,y,"Grid Completed");
+    
+grid = global.start_game_grid;
+tmpstr = "";
+str = "";
+    
+for (i = 0; i &lt; 20; i++) {
+    for (j = 0; j &lt; 20; j++) {
+        tmpstr = string(ds_grid_get(grid,j,i));
+        if(tmpstr != "0") {
+            str += tmpstr;
+            str += ", ";
+        }
+    }
+    str += "#";
+}
+draw_text(x,y,str);
+
 </string>
           </argument>
         </arguments>

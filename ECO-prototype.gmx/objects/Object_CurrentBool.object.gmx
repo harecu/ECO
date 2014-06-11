@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Set txt to left with center vertical alignment
-draw_set_halign(fa_left);
-draw_set_valign(fa_center);
-draw_set_colour(c_white);
-draw_text(x,y,txt);
+            <string>/*
+An object to store long-term booleans
+ might be used for "implied" booleans.
+*/
+current_bool_name = "";
+current_bool = false;
 </string>
           </argument>
         </arguments>

@@ -1,0 +1,59 @@
+jump
+run
+sprint
+jog
+leap
+climb
+left
+right
+up
+down
+north
+east
+west
+south
+in
+out
+around
+away
+#
+no
+nah
+nope
+rather not
+can't
+won't
+shouldn't
+cannot
+can not
+not
+#
+yes
+yeah
+yea
+ya
+yup
+yep
+sure
+of course
+no problem
+my pleasure
+why not
+#
+my name is
+I am
+I'm
+named
+call me
+called
+name
+#
+who am I?
+who am I
+don't
+know
+who I am
+what
+is my name
+am I called
+named

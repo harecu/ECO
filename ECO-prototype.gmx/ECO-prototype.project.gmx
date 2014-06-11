@@ -3,6 +3,42 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="2" name="datafiles">
+    <datafile>
+      <name>NLP.txt</name>
+      <exists>-1</exists>
+      <size>10</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>NLP.txt</filename>
+    </datafile>
+    <datafile>
+      <name>words.txt</name>
+      <exists>-1</exists>
+      <size>369</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>words.txt</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites"/>
@@ -11,21 +47,26 @@
   <scripts name="scripts">
     <script>scripts\string_random.gml</script>
     <script>scripts\time_string.gml</script>
+    <script>scripts\determine_action.gml</script>
+    <script>scripts\create_category_grid.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\Font_BasicText</font>
     <font>fonts\Font_Headings</font>
     <font>fonts\Font_PlayerInput</font>
+    <font>fonts\Font_Debug</font>
   </fonts>
   <objects name="objects">
     <object>objects\Object_InputText</object>
     <object>objects\Object_InputTextBox</object>
     <objects name="Group_StartGame">
       <object>objects\Object_StartGameText</object>
+      <object>objects\Object_CategoryGrid</object>
     </objects>
     <objects name="Group_Global">
       <object>objects\Object_Clock</object>
       <object>objects\Object_PlayerInfo</object>
+      <object>objects\Object_CurrentBool</object>
     </objects>
   </objects>
   <rooms name="rooms">
